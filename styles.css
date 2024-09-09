@@ -14,5 +14,11 @@
 .ui {
    width: 350px;
    height: 500px;
-   background-color: #F5FEFD;
+   background-color: #FEFEFA;
+}
+
+.display {
+    width: 350px;
+    height: 200px;
+    background-color: white;
 }
