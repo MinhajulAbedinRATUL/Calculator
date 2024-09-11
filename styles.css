@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 8px;
     height: 100vh;
     background-color: black;
 }
@@ -26,4 +27,39 @@
     background-color: white;
     width: 350px;
     height: 300px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 350px;
+    height: 60px;
+}
+
+.clear-button {
+    width: 30px;
+    height: 30px;
+}
+
+
+.percent-button {
+    width: 30px;
+    height: 30px;
+}
+
+
+.backspace-button {
+    width: 30px;
+    height: 30px;
+}
+
+
+.multiplication-button {
+    width: 30px;
+    height: 30px;
+}
+
+.icon{
+    width: 30px;
+    height: auto;
 }
