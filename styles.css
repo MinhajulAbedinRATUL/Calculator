@@ -1,65 +1,51 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 #container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px;
     height: 100vh;
     background-color: black;
 }
 
 .ui {
-   width: 350px;
+   width: 290px;
    height: 500px;
+   background-color:  #F8F8FF;
 }
 
 .display {
-    width: 350px;
     height: 200px;
-    background-color:  #F8F8FF;
+    padding: 5px;
 }
 
 .buttons {
-    background-color: white;
-    width: 350px;
     height: 300px;
+    padding: 5px;
 }
 
 .row {
     display: flex;
     justify-content: space-evenly;
-    width: 350px;
     height: 60px;
 }
 
-.clear-button {
-    width: 30px;
-    height: 30px;
+.button{
+    width: 50px;
+    height: 50px;
 }
 
-
-.percent-button {
-    width: 30px;
-    height: 30px;
-}
-
-
-.backspace-button {
-    width: 30px;
-    height: 30px;
-}
-
-
-.multiplication-button {
-    width: 30px;
-    height: 30px;
-}
-
-.icon{
-    width: 30px;
+.icon {
+    width: 50px;
     height: auto;
+}
+
+.equal {
+    width: 115px;
+    height: 50px;
+    border-radius: 5px;
 }
