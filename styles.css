@@ -9,17 +9,17 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black;
+    background-color: #1F2937;
 }
 
 .ui {
-   width: 290px;
-   height: 500px;
+   width: 280px;
+   height: 410px;
    background-color:  #F8F8FF;
 }
 
 .display {
-    height: 200px;
+    height: 100px;
     padding: 5px;
 }
 
@@ -28,7 +28,7 @@
     padding: 5px;
 }
 
-.row {
+.row-one, .row-two, .row-three, .row-four, .row-five {
     display: flex;
     justify-content: space-evenly;
     height: 60px;
@@ -40,16 +40,26 @@
     transition: transform 0.2s ease;
 }
 
-.icon {
-    width: 50px;
-    height: auto;
-}
-
 .equal {
     width: 115px;
     height: 50px;
     border-radius: 5px;
 }
+
+.upper-display, .lower-display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+    height: 50px;
+    padding: 20px;
+}
+
+.lower-display {
+    font-size: 50px;
+    font-weight: 900;
+}
+
 
 .button:active {
     transform: scale(0.95);
