@@ -1,11 +1,15 @@
 const upperDisplay = document.querySelector('.upper-display');
 const lowerDisplay = document.querySelector('.lower-display');
 const buttons = document.querySelectorAll('.buttons');
+const body = document.querySelector('body');
+
+body.addEventListener("keydown", display);
 
 buttons.forEach((button) => { 
 
    button.addEventListener('click', display);
 });
+
 
 
 const data = {
@@ -65,7 +69,7 @@ function display (e) {
         data.clear();
     }
 
-    else if (target.classList.contains('percent')) {
+    else if (target.classList.contains('percent') || (e.shiftKey == true && e.keyCode == 53)) {
         if(data.result) {
         updateValue()
     }
@@ -73,84 +77,76 @@ function display (e) {
         print("%");
     }
 
-    else if (target.classList.contains('backspace')) {
+    else if (target.classList.contains('backspace') || e.keyCode == 8) {
         data.backspace();
-        console.log(data.expression);
-        console.log(data.number1);
-        console.log(data.operator);
-        console.log(data.number2);
-        console.log(data.result);
     }
 
-    else if (target.classList.contains('division')) {
+    else if (target.classList.contains('division') || e.keyCode == 191) {
         updateValue();
         print("÷");
     }
-
-    else if (target.classList.contains('seven')) {
-        print("7");
-    }
-
-    else if (target.classList.contains('eight')) {
-        print("8");
-    }
-
-    else if (target.classList.contains('nine')) {
-        print("9");
-    }
-
-    else if (target.classList.contains('multiplication')) {
+    
+    else if (target.classList.contains('multiplication') || (e.shiftKey == true && e.keyCode == 56)) {
         updateValue();
         print("×");
     }
+    
+    else if (target.classList.contains('plus') || (e.shiftKey == true && e.keyCode == 187)) {
+        updateValue();
+        print("+");
+    }
+    
+    else if (target.classList.contains('minus') || e.keyCode == 189) {
+        updateValue();
+        print("−");
+    }
 
-    else if (target.classList.contains('four')) {
+    else if (target.classList.contains('seven') || e.keyCode == 55) {
+        print("7");
+    }
+
+    else if (target.classList.contains('eight') || e.keyCode == 56) {
+        print("8");
+    }
+
+    else if (target.classList.contains('nine') || e.keyCode == 57) {
+        print("9");
+    }
+
+    else if (target.classList.contains('four') || e.keyCode == 52) {
         print("4");
     }
 
-    else if (target.classList.contains('five')) {
+    else if (target.classList.contains('five') || e.keyCode == 53) {
         print("5");
     }
 
    
-    else if (target.classList.contains('six')) {
+    else if (target.classList.contains('six') || e.keyCode == 54) {
         print("6");
     }
 
-    else if (target.classList.contains('minus')) {
-          updateValue();
-          print("−");
-    }
-
-    else if (target.classList.contains('one')) {
+    else if (target.classList.contains('one') || e.keyCode == 49) {
           print("1");
     }
 
-    else if (target.classList.contains('two')) {
+    else if (target.classList.contains('two') || e.keyCode == 50) {
           print("2");
     }
 
-    else if (target.classList.contains('three')) {
+    else if (target.classList.contains('three') || e.keyCode == 51) {
           print("3");
-          console.log(data.expression);
-          console.log(data.result);
     }
 
-    else if (target.classList.contains('plus')) {
-        updateValue();
-        print("+");
-        console.log(data.expression);
-    }
-
-    else if (target.classList.contains('zero')) {
+    else if (target.classList.contains('zero') || e.keyCode == 48) {
         print("0");
     }
 
-    else if (target.classList.contains('period')) {
+    else if (target.classList.contains('period') || e.keyCode == 190) {
         period();
     }
 
-    else if (target.classList.contains('equal')) {
+    else if (target.classList.contains('equal') || e.keyCode == 13) {
         calculate();
         lowerDisplay.innerHTML = data.result;
     }
@@ -282,14 +278,3 @@ function period() {
     }
 }
 
-// function backspace() {
-//     if(data.expression.length == 1) {
-//         data.clear();
-//         console.log("clear");
-//     }
-
-//     else { 
-//         data.backspace();
-//         console.log("backspace");
-//     }
-// }
